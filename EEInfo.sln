@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEInfo", "EEInfo\EEInfo.csproj", "{C6440554-BDA4-443F-B0F7-5C6453CD4844}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEInfo.Api", "EEInfo.Api\EEInfo.Api.csproj", "{0BC3C77E-BA98-4114-A53A-B52C0D1197F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6440554-BDA4-443F-B0F7-5C6453CD4844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6440554-BDA4-443F-B0F7-5C6453CD4844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6440554-BDA4-443F-B0F7-5C6453CD4844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6440554-BDA4-443F-B0F7-5C6453CD4844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BC3C77E-BA98-4114-A53A-B52C0D1197F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC3C77E-BA98-4114-A53A-B52C0D1197F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC3C77E-BA98-4114-A53A-B52C0D1197F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC3C77E-BA98-4114-A53A-B52C0D1197F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B2216C4-6C84-433B-B05D-6EEFC1D19105}
+	EndGlobalSection
+EndGlobal

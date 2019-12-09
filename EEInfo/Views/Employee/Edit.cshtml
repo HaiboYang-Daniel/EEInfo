@@ -1,0 +1,81 @@
+﻿@model EEInfo.Models.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HiredDate" class="control-label"></label>
+                <input asp-for="HiredDate" class="form-control" />
+                <span asp-validation-for="HiredDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <h4>Tasks</h4>
+    @Html.ActionLink("Create Task", "CreateEmployeeTask", new { Model.Id })
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeTasks.First().TaskName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeTasks.First().StartTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeTasks.First().Deadline)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.EmployeeTasks)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TaskName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Deadline)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditEmployeeTask", new { item.Id }) |
+                        @Html.ActionLink("Details", "DetailsEmployeeTask", new { item.Id }) |
+                        @Html.ActionLink("Delete", "DeleteEmployeeTask", new { item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
